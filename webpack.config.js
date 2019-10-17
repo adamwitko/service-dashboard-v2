@@ -41,7 +41,6 @@ module.exports = {
   resolve: { extensions: ['.js', '.jsx', '.ts', '.tsx', '.css', '.scss'] },
   output: {
     path: path.resolve(__dirname, 'dist/'),
-    publicPath: '/dist/',
     filename: 'bundle.js',
   },
   devServer: {
@@ -53,7 +52,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Service Dashboard',
+      template: __dirname + '/public/index.html',
     }),
   ],
 }
