@@ -1,12 +1,18 @@
 import React from 'react'
-import 'react-netlify-identity-widget/styles.css'
 
 const IdentityModal = React.lazy(() => import('react-netlify-identity-widget'))
 
+import 'react-netlify-identity-widget/styles.css'
+
 export function Login() {
-  const [dialog, setDialog] = React.useState(false)
+  const [dialog, setDialog] = React.useState(true)
 
   return (
-    <IdentityModal showDialog={dialog} onCloseDialog={() => setDialog(false)} />
+    <React.Suspense fallback="...">
+      <IdentityModal
+        showDialog={dialog}
+        //onCloseDialog={() => setDialog(false)}
+      />
+    </React.Suspense>
   )
 }
