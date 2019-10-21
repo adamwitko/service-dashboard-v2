@@ -29,9 +29,10 @@
     "node-sass": "^4.12.0",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.1",
-    "reach-router": "0.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-netlify-identity": "^0.1.9",
+    "react-netlify-identity-widget": "^0.2.5",
     "react-router-dom": "^5.0.1",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
@@ -48,6 +49,9 @@
     }
   },
   "dependencies": {
+    "@reach/dialog": "^0.3.0",
+    "@reach/tabs": "^0.3.0",
+    "@reach/visually-hidden": "^0.3.0",
     "axios-hooks": "^1.4.0"
   }
 }

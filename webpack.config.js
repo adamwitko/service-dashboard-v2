@@ -29,8 +29,8 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1,
-              modules: true,
+              //importLoaders: 1,
+              //modules: true,
             },
           },
           'sass-loader',
@@ -44,9 +44,9 @@ module.exports = {
     filename: 'bundle.js',
   },
   devServer: {
-    contentBase: path.join(__dirname, 'public/'),
+    contentBase: path.join(__dirname, 'dist/'),
     port: 3000,
-    publicPath: 'http://localhost:3000/dist/',
+    publicPath: 'http://localhost:3000/',
     hotOnly: true,
   },
   plugins: [
