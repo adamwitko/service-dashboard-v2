@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { AppBar, Button, Toolbar, Typography } from '@material-ui/core'
 import { NavLink, LinkProps } from 'react-router-dom'
+import { useIdentityContext } from 'react-netlify-identity-widget'
 
 const styles = {
   flexGrow: 1,
@@ -11,6 +12,7 @@ const styles = {
 
 export function Header() {
   const [now, setNow] = useState(new Date())
+  const { logoutUser } = useIdentityContext()
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -46,6 +48,9 @@ export function Header() {
           color="inherit"
         >
           TABLEAU
+        </Button>
+        <Button size="large" color="inherit" onClick={logoutUser}>
+          Logout
         </Button>
       </Toolbar>
     </AppBar>
